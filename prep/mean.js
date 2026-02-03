@@ -12,3 +12,15 @@ function sumValues(list) {
 }
 
 sumValues([1, 2, 3, 4, 5]);
+
+/**
+	The sumValues function has hardcoded index access (list[0] through list[4]),  
+  which creates two problems:    
+
+  1. Too few elements: If the array has fewer than 5 elements (like items with  
+  only 4 elements), accessing list[4] returns undefined. Adding undefined to a  
+  number produces NaN, so the entire result becomes NaN. 
+
+  2. Too many elements: If the array has more than 5 elements, anything beyond  
+  index 4 is ignored and won't be included in the sum. 
+ */
