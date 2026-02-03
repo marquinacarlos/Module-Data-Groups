@@ -26,7 +26,7 @@
  */
 
 
-function calculateMean(list) {
+export function calculateMean(list) {
 	let total = 0;
 	for (const item of list) {
 		total += item;
