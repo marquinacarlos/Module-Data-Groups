@@ -4,7 +4,11 @@
   "description": "This README will guide you through the different sections for this week.",
   "main": "writers.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:fix": "jest --watch ./fix",
+    "test:implement": "jest --watch ./implement",
+    "test:refactor": "jest --watch ./refactor",
+    "test:stretch": "jest --watch ./stretch"
   },
   "keywords": [],
   "author": "",
