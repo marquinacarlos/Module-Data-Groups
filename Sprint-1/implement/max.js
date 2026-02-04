@@ -5,7 +5,5 @@ function findMax(elements = []) {
 	});
 	return max;
 }
-// console.log(findMax())
-
 
 module.exports = findMax;
