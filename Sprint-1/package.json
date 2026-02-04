@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest",
     "test:fix": "jest --watch ./fix",
-    "test:implement": "jest --watch ./implement",
-    "test:refactor": "jest --watch ./refactor",
-    "test:stretch": "jest --watch ./stretch"
+    "test:imp": "jest --watch ./implement",
+    "test:ref": "jest --watch ./refactor",
+    "test:str": "jest --watch ./stretch"
   },
   "keywords": [],
   "author": "",
