@@ -12,7 +12,7 @@ We have set things up already so that this file can see your function from the o
 
 const findMax = require("./max.js");
 
-describe("max.js test", () => {
+describe("findMax", () => {
 	// Given an empty array
 	// When passed to the max function
 	// Then it should return -Infinity
