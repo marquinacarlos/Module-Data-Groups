@@ -7,8 +7,7 @@
     "test": "jest",
     "test:fix": "jest --watch ./fix",
     "test:imp": "jest --watch ./implement",
-    "test:ref": "jest --watch ./refactor",
-    "test:str": "jest --watch ./stretch"
+    "test:ref": "jest --watch ./refactor"
   },
   "keywords": [],
   "author": "",
