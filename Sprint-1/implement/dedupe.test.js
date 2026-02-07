@@ -13,15 +13,38 @@ E.g. dedupe([1, 2, 1]) target output: [1, 2]
 
 // Acceptance Criteria:
 
-// Given an empty array
-// When passed to the dedupe function
-// Then it should return an empty array
-test.todo("given an empty array, it returns an empty array");
+describe('dedupe', () => {
+  // Given an empty array
+  // When passed to the dedupe function
+  // Then it should return an empty array
+  test("given an empty array, it returns an empty array", () => {
+    const result = dedupe([]);
+    expect(result).toEqual([]);
+  });
 
-// Given an array with no duplicates
-// When passed to the dedupe function
-// Then it should return a copy of the original array
+  // Given an array with no duplicates
+  // When passed to the dedupe function
+  // Then it should return a copy of the original array
+  test("given an array with no duplicates, returns a copy of the original array", () => {
+    const result = dedupe([1, 2, 3, 4]);
+    expect(result).toEqual([1, 2, 3, 4]);
+  });
 
-// Given an array with strings or numbers
-// When passed to the dedupe function
-// Then it should remove the duplicate values, preserving the first occurence of each element
+  // Given an array with strings or numbers
+  // When passed to the dedupe function
+  // Then it should remove the duplicate values, preserving the first occurence of each element
+  test("given an array with duplicate strings, removes duplicates and preserves first occurrence", () => {
+    const result = dedupe(['a', 'a', 'a', 'b', 'b', 'c']);
+    expect(result).toEqual(['a', 'b', 'c']);
+  });
+
+  test("given an array with duplicate numbers, removes duplicates and preserves first occurrence", () => {
+    const result = dedupe([5, 1, 1, 2, 3, 2, 5, 8]);
+    expect(result).toEqual([5, 1, 2, 3, 8]);
+  });
+
+  test("given an array with duplicates in different positions, preserves first occurrence", () => {
+    const result = dedupe([1, 2, 1]);
+    expect(result).toEqual([1, 2]);
+  });
+});
