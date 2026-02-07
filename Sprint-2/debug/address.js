@@ -1,4 +1,7 @@
 // Predict and explain first...
+// Prediction: logs "My house number is undefined"
+// Explanation: address[0] tries to access index 0 like an array, but objects use named keys.
+// Fix: use address.houseNumber to access the property by name.
 
 // This code should log out the houseNumber from the address object
 // but it isn't working...
