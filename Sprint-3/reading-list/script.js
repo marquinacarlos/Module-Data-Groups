@@ -21,3 +21,11 @@ const books = [
   },
 ];
 
+const list = document.getElementById("reading-list");
+
+for (const book of books) {
+  const li = document.createElement("li");
+  li.style.backgroundColor = book.alreadyRead ? "green" : "red";
+  li.innerHTML = `${book.title} by ${book.author} <img src="${book.bookCoverImage}" />`;
+  list.appendChild(li);
+}
