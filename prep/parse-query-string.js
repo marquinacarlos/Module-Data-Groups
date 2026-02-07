@@ -6,13 +6,11 @@ function parseQueryString(queryString) {
   const keyValuePairs = queryString.split("&");
 
   for (const pair of keyValuePairs) {
-    const index = pair.indexOf("=");
-    const key = pair.substring(0, index);
-    const value = pair.substring(index + 1);
+    const [key, value] = pair.split("=");
     queryParams[key] = value;
   }
 
   return queryParams;
 }
 
-module.exports = parseQueryString;
+module.exports = parseQueryString
